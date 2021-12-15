@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InmuebleService } from 'src/app/services/inmueble.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  allInmuebles: any;
 
-  ngOnInit(): void {
+  inmueble: any = {
+    habitaciones:"",
+    banos: "",
+    patio: "",
+    pisos: "",
+    sector: "",
+    precio: "",
+    cocinaIntegral: ""
   }
 
+  constructor(private inmuebleService: InmuebleService) { }
+
+  ngOnInit(): void {
+    this.allInmuebles = []
+    this.getAllInmuebles()
+  }
+
+  getAllInmuebles(){
+    this.inmuebleService.getAllInmuebles().subscribe((inmuebles)=>{
+      this.allInmuebles = inmuebles
+    })
+  }
 }

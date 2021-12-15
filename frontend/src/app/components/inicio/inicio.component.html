@@ -1,1 +1,28 @@
-<p>inicio works!</p>
+<body class="fondo">
+  <br>
+  <button type="button" class="btn ms-4" style="background: red;" data-bs-toggle="modal"
+    data-bs-target="#createGuitar">Busqueda</button>
+  <div class="container mt-5">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="d-flex flex-wrap justify-content-evenly mt-5">
+          <div class="card border-info mb-3" style="max-width: 18rem;" *ngFor="let inmueble of allInmuebles">
+            <div class="card-header">{{inmueble.nombreInmueble}}</div>
+            <div class="card-body">
+              <h5 class="card-title">Información del inmueble</h5>
+              <div class="text-start">
+                <p class="card-text">{{"# de habitaciones: " + inmueble.habitaciones}}</p>
+                <p class="card-text">{{"# de baños: " + inmueble.banos}}</p>
+                <p class="card-text">{{"Patio: " + inmueble.patio}}</p>
+                <p class="card-text">{{"# de pisos: " + inmueble.pisos}}</p>
+                <p class="card-text">{{"Sector: " + inmueble.sector}}</p>
+                <p class="card-text">{{"Presupuesto Maximo: " + inmueble.precio}}</p>
+                <p class="card-text">{{"Cocina Integral: " + inmueble.cocinaIntegral}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
