@@ -7,6 +7,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { NuevoInmuebleComponent } from './components/nuevo-inmueble/nuevo-inmueble.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
     InicioComponent,
     NavbarComponent,
     LoginComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    NuevoInmuebleComponent
   ],
   imports: [
     BrowserModule,
