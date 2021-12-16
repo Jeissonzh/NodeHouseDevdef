@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  navbarText: string;
+
+  constructor() {
+    this.navbarText = "Ingresar";
+   }
 
   ngOnInit(): void {
+
   }
 
+  changeNavbarText(texto: boolean): void{
+    texto? this.navbarText = "Cerrar Sesion": this.navbarText = "Ingresar";
+  }
 }
