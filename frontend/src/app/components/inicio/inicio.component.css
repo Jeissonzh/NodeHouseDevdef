@@ -1,6 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rye&display=swap");
+
 .fondo {
   background: url("../../../assets/img/fondoCasas.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: red;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(255, 2, 2, 0.61), 0 6px 20px 0 rgba(0, 0, 0, 0.801);
+  border: 1px solid rgb(3, 3, 3)
+}
+
+.btn:hover {
+  background-color: #0bf016;
+  box-shadow: 0 8px 16px 0 #0bf016, 0 6px 20px 0 rgba(0, 0, 0, 0.801);
+  transform: translateY(4px);
+}
+
+.cardInmueble{
+  background-color: #c4c4c4;
+}
+
+a{
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
 }

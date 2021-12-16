@@ -1,15 +1,25 @@
 <body class="fondo">
   <br>
-  <button type="button" class="btn ms-4" style="background: red;" data-bs-toggle="offcanvas"
-  href="#offcanvasExample">Busqueda</button>
+  <button type="button" class="btn ms-4" data-bs-toggle="offcanvas" href="#offcanvasExample">
+    Busqueda
+  </button>
+  <button type="button" class="btn ms-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Agregar Inmueble
+  </button>
   <div class="container mt-5">
-    <div class="card text-center">
+    <div class="card bg-transparent text-center" style="border: none;">
       <div class="card-body">
-        <div class="d-flex flex-wrap justify-content-evenly mt-5">
-          <div class="card border-info mb-3" style="max-width: 18rem;" *ngFor="let inmueble of allInmuebles">
-            <div class="card-header">{{inmueble.nombreInmueble}}</div>
+        <div class="d-flex flex-wrap justify-content-evenly">
+          <div class="card w-25 border-dark text-white bg-dark cardInmueble mb-3">
+            <h3 id="catalogo">CATÁLOGO</h3>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-evenly mt-3">
+          <div class="card border-dark text-dark cardInmueble mb-3" style="max-width: 18rem;"
+            *ngFor="let inmueble of allInmuebles">
+            <div class="card-header text-white bg-dark" style="font-weight: bold;">{{inmueble.nombreInmueble}}</div>
             <div class="card-body">
-              <h5 class="card-title">Información del inmueble</h5>
+              <h6 class="card-title">Información del inmueble</h6>
               <div class="text-start">
                 <p class="card-text">{{"# de habitaciones: " + inmueble.habitaciones}}</p>
                 <p class="card-text">{{"# de baños: " + inmueble.banos}}</p>
@@ -20,11 +30,12 @@
                 <p class="card-text">{{"Cocina Integral: " + inmueble.cocinaIntegral}}</p>
               </div>
             </div>
+            <div class="card-footer text-white bg-dark ">
+              <a href="">Contactar asesor</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </body>
-<button type="button" class="btn ms-4" style="background: red;" data-bs-toggle="modal" data-bs-target="#exampleModal"
->Agregar Inmueble</button>
