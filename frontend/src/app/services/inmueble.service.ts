@@ -11,4 +11,7 @@ export class InmuebleService {
   getAllInmuebles(){
     return this.httpClient.get("http://localhost:3000/inmuebles/")
   }
+  postCreateHome(home: any){
+    return this.httpClient.post("http://localhost:3000/inmueble/",home,{headers: {"Content-Type": "application/json"} })
+  }
 }

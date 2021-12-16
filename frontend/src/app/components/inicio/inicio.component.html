@@ -1,7 +1,7 @@
 <body class="fondo">
   <br>
-  <button type="button" class="btn ms-4" style="background: red;" data-bs-toggle="modal"
-    data-bs-target="#createGuitar">Busqueda</button>
+  <button type="button" class="btn ms-4" style="background: red;" data-bs-toggle="offcanvas"
+  href="#offcanvasExample">Busqueda</button>
   <div class="container mt-5">
     <div class="card text-center">
       <div class="card-body">
@@ -13,10 +13,10 @@
               <div class="text-start">
                 <p class="card-text">{{"# de habitaciones: " + inmueble.habitaciones}}</p>
                 <p class="card-text">{{"# de baños: " + inmueble.banos}}</p>
-                <p class="card-text">{{"Patio: " + inmueble.patio}}</p>
                 <p class="card-text">{{"# de pisos: " + inmueble.pisos}}</p>
                 <p class="card-text">{{"Sector: " + inmueble.sector}}</p>
                 <p class="card-text">{{"Presupuesto Maximo: " + inmueble.precio}}</p>
+                <p class="card-text">{{"Patio: " + inmueble.patio}}</p>
                 <p class="card-text">{{"Cocina Integral: " + inmueble.cocinaIntegral}}</p>
               </div>
             </div>
@@ -26,3 +26,5 @@
     </div>
   </div>
 </body>
+<button type="button" class="btn ms-4" style="background: red;" data-bs-toggle="modal" data-bs-target="#exampleModal"
+>Agregar Inmueble</button>
