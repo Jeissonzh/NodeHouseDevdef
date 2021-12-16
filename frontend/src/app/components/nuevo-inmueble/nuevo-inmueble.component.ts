@@ -10,7 +10,7 @@ export class NuevoInmuebleComponent implements OnInit {
 
   allInmuebles: any;
   allUsers: any;
-
+  InmueblesHabitaciones: any;
   
   inmueble: any = {
     habitaciones:"",
@@ -40,6 +40,13 @@ export class NuevoInmuebleComponent implements OnInit {
     })
   }
 
+  
+  /*getInmueblesHabitaciones(){
+    this.inmuebleService.getInmueblesHabitaciones().subscribe((inmueble)=>{
+      this.InmueblesHabitaciones = inmueble
+    })
+  }
+*/
   saveInmueble(): void{
     if(this.inmueble.habitaciones && this.inmueble.banos && this.inmueble.pisos && this.inmueble.sector && this.inmueble.precio){
       this.inmuebleService.postCreateInmueble(this.inmueble).subscribe((respuesta)=>{
