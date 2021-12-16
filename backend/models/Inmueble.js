@@ -21,7 +21,18 @@ const inmuebleSchema = new Schema({
     },
     cocinaIntegral: {
         type: String
-    }
+    },
+    nombreAsesor:{
+        type: String
+    },
+    nombreInmueble:{
+        type: String
+    },
+    vistas:{
+        type: Number
+    },
+    
+    
 });
 
-module.exports = model("Inmueble",inmuebleSchema,"inmuebles")
+module.exports = model("Inmueble",inmuebleSchema,"")

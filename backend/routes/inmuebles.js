@@ -1,9 +1,10 @@
 const express = require("express");
-const {listAllInmuebles} = require("../controllers/InmuebleController");
+const {listAllInmuebles,saveInmueble} = require("../controllers/InmuebleController");
 
 const inmuebles = express.Router();
 
 inmuebles.get('/', listAllInmuebles);
+inmuebles.post('/', saveInmueble);
 
 module.exports = {
     inmuebles
