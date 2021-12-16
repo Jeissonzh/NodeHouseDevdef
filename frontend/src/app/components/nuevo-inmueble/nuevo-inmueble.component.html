@@ -1,0 +1,114 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Inmueble</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6" id="inputGroup-sizing-sm"
+              >Nombre del Inmueble</span
+            >
+            <input
+            [(ngModel)]="inmueble.nombreInmueble"
+              type="text"   
+              class="form-control d-grid gap-2 col-6"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+            />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6" id="inputGroup-sizing-sm"
+              >Numero de habitaciones</span
+            >
+            <input
+            [(ngModel)]="inmueble.habitaciones"
+              type="number"
+              class="form-control d-grid gap-2 col-6"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+            />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6" id="inputGroup-sizing-sm"
+              >Numero de baños</span
+            >
+            <input
+            [(ngModel)]="inmueble.banos"
+              type="number"
+              class="form-control d-grid gap-2 col-6"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+            />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6" id="inputGroup-sizing-sm"
+              >Numero de pisos</span
+            >
+            <input
+            [(ngModel)]="inmueble.pisos"
+              type="number"
+              class="form-control d-grid gap-2 col-6"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+            />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6" id="inputGroup-sizing-sm"
+              >Sector</span
+            >
+            <input
+            [(ngModel)]="inmueble.sector"
+              type="text"
+              class="form-control d-grid gap-2 col-6"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+            />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6" id="basic-addon1"
+              >Patio</span
+            >
+            <select [(ngModel)]="inmueble.patio"
+              class="form-select d-grid gap-2 col-6"
+              aria-label="Default select example"
+            >
+              <option value="1">Si</option>
+              <option value="2">No</option>
+            </select>
+          </div>
+        
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6" id="basic-addon1"
+              >Cocina Integral</span
+            >
+            <select
+            [(ngModel)]="inmueble.cocinaIntegral"
+              class="form-select d-grid gap-2 col-6"
+              aria-label="Default select example"
+            >
+              <option value="1">Si</option>
+              <option value="2">No</option>
+            </select>
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text d-grid gap-2 col-6">Precio Alquiler</span>
+            <input
+            [(ngModel)]="inmueble.precio"
+              type="number"
+              class="form-control d-grid gap-2 col-6"
+              aria-label="Amount (to the nearest dollar)"
+            />
+            <span class="input-group-text">.00</span>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary my-3" role="button" data-bs-dismiss="modal"  (click)="saveInmueble()"> Agregar Inmueble </a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
