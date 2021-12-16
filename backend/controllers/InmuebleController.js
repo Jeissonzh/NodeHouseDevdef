@@ -6,7 +6,9 @@ const listAllInmuebles = (req, res) => {
     Inmueble.find((err, inmuebles) => {
         if (err) return res.send(err)
         return res.send(inmuebles)
+        console.log(mongoResponse)
     })
+    
 }
 
 const saveInmueble = (req, res) => {
@@ -27,7 +29,16 @@ const saveInmueble = (req, res) => {
     })
 }
 
+const searchHomeByRoom = (req,res)=>{
+    Inmueble.find({"habitaciones":req.query.habitaciones},(err, inmuebles) => {
+        if (err) return res.send(err)
+        return res.send(inmuebles)
+    })
+}
+
+
 module.exports = {
     listAllInmuebles,
     saveInmueble,
+    searchHomeByRoom,
 }
