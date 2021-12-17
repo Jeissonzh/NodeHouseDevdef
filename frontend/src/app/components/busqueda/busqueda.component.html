@@ -4,41 +4,41 @@
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="input-group mb-3">
-        
+
     </div>
 
     <div class="input-group my-3">
-        <span class="input-group-text d-grid gap-2 col-6 mx-auto" styles="width:50%" id="basic-addon1">Numero de habitaciones</span> 
+        <span class="input-group-text d-grid gap-2 col-6 mx-auto" styles="width:50%" id="basic-addon1">Numero de habitaciones</span>
         <select class="form-select d-grid gap-2 col-6 mx-auto" aria-label="Default select example" [(ngModel)]="inmueble.habitaciones">
             <option [value]="habitacionesB" *ngFor="let habitacionesB of this.allInmueblesH">{{habitacionesB}}</option>
         </select>
     </div>
     <div class="input-group my-3">
-        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Numero de baños</span> 
+        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Numero de baños</span>
         <select class="form-select d-grid gap-2 col-6 mx-auto" aria-label="Default select example" [(ngModel)]="inmueble.banos">
             <option [value]="banosB" *ngFor="let banosB of this.allInmueblesB">{{banosB}}</option>
           </select>
     </div>
     <div class="input-group my-3">
-        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Numero de pisos</span> 
+        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Numero de pisos</span>
         <select class="form-select d-grid gap-2 col-6 mx-auto" aria-label="Default select example" [(ngModel)]="inmueble.pisos">
             <option [value]="pisosB" *ngFor="let pisosB of this.allInmueblesPi">{{pisosB}}</option>
           </select>
     </div>
     <div class="input-group my-3">
-        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Sector</span> 
+        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Sector</span>
         <select class="form-select d-grid gap-2 col-6 mx-auto" aria-label="Default select example" [(ngModel)]="inmueble.sector">
             <option [value]="sectorB" *ngFor="let sectorB of this.allInmueblesS">{{sectorB}}</option>
           </select>
     </div>
     <div class="input-group my-3">
-        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Patio</span> 
+        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Patio</span>
         <select class="form-select d-grid gap-2 col-6 mx-auto" aria-label="Default select example" [(ngModel)]="inmueble.patio">
             <option [value]="patioB" *ngFor="let patioB of this.allInmueblesPa">{{patioB}}</option>
           </select>
     </div>
     <div class="input-group my-3">
-        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Cocina Integral</span> 
+        <span class="input-group-text d-grid gap-2 col-6 mx-auto" id="basic-addon1">Cocina Integral</span>
         <select class="form-select d-grid gap-2 col-6 mx-auto" aria-label="Default select example" [(ngModel)]="inmueble.cocinaI">
             <option [value]="CocinaIB" *ngFor="let CocinaIB of this.allInmueblesCI">{{CocinaIB}}</option>
           </select>
@@ -49,9 +49,9 @@
         <span class="input-group-text">.00</span>
     </div>
     <div class="d-grid gap-2 col-6 mx-auto">
-        <a class="btn btn-primary my-3" role="button" data-bs-dismiss="offcanvas" (click)="clickConsultar()">
+        <a class="btn btn-primary my-3" role="button" data-bs-dismiss="offcanvas" (click)="buscarInmuebles()">
         Realizar Busqueda
         </a>
     </div>
 </div>
-  
+

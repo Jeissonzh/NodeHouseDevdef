@@ -9,6 +9,7 @@ import { InmuebleService } from 'src/app/services/inmueble.service';
 export class InicioComponent implements OnInit {
 
   allInmuebles: any;
+  busquedaInmueble: any;
 
   inmueble: any = {
     habitaciones:"",
@@ -25,11 +26,18 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     this.allInmuebles = []
     this.getAllInmuebles()
+    this.getBusqueda()
   }
 
   getAllInmuebles(){
     this.inmuebleService.getAllInmuebles().subscribe((inmuebles)=>{
       this.allInmuebles = inmuebles
+    })
+  }
+
+  getBusqueda(){
+    this.inmuebleService.getBusqueda(this.inmueble.habitaciones, this.inmueble.banos).subscribe((inmuebles)=>{
+      this.busquedaInmueble = inmuebles
     })
   }
 }

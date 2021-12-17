@@ -15,7 +15,29 @@
           </div>
         </div>
         <div class="d-flex flex-wrap justify-content-evenly mt-3">
-          <div class="card border-dark text-dark cardInmueble mb-3" style="max-width: 18rem;" *ngFor="let inmueble of allInmuebles">
+          <!-- Card de Catalogo, trae todos los docuemnetos que encuentre -->
+          <div class="card border-dark text-dark cardInmueble mb-3" style="max-width: 18rem;"
+            *ngFor="let inmueble of allInmuebles">
+            <div class="card-header text-white bg-dark" style="font-weight: bold;">{{inmueble.nombreInmueble}}</div>
+            <div class="card-body">
+              <h6 class="card-title">Información del inmueble</h6>
+              <div class="text-start">
+                <p class="card-text">{{"# de habitaciones: " + inmueble.habitaciones}}</p>
+                <p class="card-text">{{"# de baños: " + inmueble.banos}}</p>
+                <p class="card-text">{{"# de pisos: " + inmueble.pisos}}</p>
+                <p class="card-text">{{"Sector: " + inmueble.sector}}</p>
+                <p class="card-text">{{"Presupuesto Maximo: " + inmueble.precio}}</p>
+                <p class="card-text">{{"Patio: " + inmueble.patio}}</p>
+                <p class="card-text">{{"Cocina Integral: " + inmueble.cocinaIntegral}}</p>
+              </div>
+            </div>
+            <div class="card-footer text-white bg-dark ">
+              <a href="">Contactar asesor</a>
+            </div>
+          </div>
+          <!-- Card de Busqueda, trae solo los documentos buscados -->
+          <div class="card border-dark text-dark cardInmueble mb-3" style="max-width: 18rem;"
+            *ngFor="let inmueble of busquedaInmueble">
             <div class="card-header text-white bg-dark" style="font-weight: bold;">{{inmueble.nombreInmueble}}</div>
             <div class="card-body">
               <h6 class="card-title">Información del inmueble</h6>

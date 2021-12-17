@@ -11,7 +11,7 @@ export class NuevoInmuebleComponent implements OnInit {
   allInmuebles: any;
   allUsers: any;
   InmueblesHabitaciones: any;
-  
+
   inmueble: any = {
     habitaciones:"",
     banos:"",
@@ -25,7 +25,7 @@ export class NuevoInmuebleComponent implements OnInit {
     vistas:""
   }
 
-  constructor(private inmuebleService: InmuebleService) { 
+  constructor(private inmuebleService: InmuebleService) {
     this.allUsers = ["Agente 1","Agente 2","Agente 3"]
   }
 
@@ -40,7 +40,7 @@ export class NuevoInmuebleComponent implements OnInit {
     })
   }
 
-  
+
   /*getInmueblesHabitaciones(){
     this.inmuebleService.getInmueblesHabitaciones().subscribe((inmueble)=>{
       this.InmueblesHabitaciones = inmueble
@@ -48,13 +48,14 @@ export class NuevoInmuebleComponent implements OnInit {
   }
 */
   saveInmueble(): void{
-    if(this.inmueble.habitaciones && this.inmueble.banos && this.inmueble.pisos && this.inmueble.sector && this.inmueble.precio){
+    if(this.inmueble.nombreInmueble && this.inmueble.habitaciones && this.inmueble.banos && this.inmueble.pisos && this.inmueble.sector && this.inmueble.precio){
       this.inmuebleService.postCreateInmueble(this.inmueble).subscribe((respuesta)=>{
         if(respuesta as any){
-          alert("Error, no ha completado los datos de su inmueble")
-        }else{
           document.getElementById("closeModal")?.click()
           alert("Se ha agregado el inmueble")
+          this.getAllInmuebles()
+        }else{
+          alert("Error, no ha completado los datos de su inmueble")
           this.getAllInmuebles()
         }
       })
