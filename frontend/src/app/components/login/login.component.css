@@ -1,3 +1,21 @@
+.fondo {
+  background: url("../../../assets/img/fondoCasas.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
+  padding: 170px; 
+}
+
+.container{
+  padding-top: 8px;
+}
+
+.imgRedonda {
+  background: url("../../../assets/img/profilePhoto1.png");
+  width:120px;
+  height:120px;
+  border-radius:150px;
+}
 
 .formulario{
   background: #2980B9;  /* fallback for old browsers */

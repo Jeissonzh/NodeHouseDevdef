@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { NuevoInmuebleComponent } from './components/nuevo-inmueble/nuevo-inmueble.component';
+import { AsesorComponent } from './components/asesor/asesor.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NuevoInmuebleComponent } from './components/nuevo-inmueble/nuevo-inmueb
     NavbarComponent,
     LoginComponent,
     BusquedaComponent,
-    NuevoInmuebleComponent
+    NuevoInmuebleComponent,
+    AsesorComponent
   ],
   imports: [
     BrowserModule,
