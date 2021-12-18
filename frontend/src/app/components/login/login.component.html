@@ -1,25 +1,26 @@
 <section id="login" class="mt-8">
+
   <body class="fondo">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-4 formulario">
-        <div class="form-group text-center">
-          
-          <h1 class="text-dark">Iniciar sesión</h1>
-          <img class="imgRedonda"/>
-        </div>
-        <div class="form-group mx-sm-2 pt-2">
-          <input type="text" class="form-control" placeholder="Ingrese su Usuario">
-        </div>
-        <div class="form-group mx-sm-2 pt-2">
-          <input type="text" class="form-control" placeholder="Ingrese su Contraseña">
-        </div>
-        <div class="d-grid gap-2 col-8 mx-auto pt-4">
-          <input type="submit" class="btn btn-lg btn-primary ingresar" value="Ingresar">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4 formulario">
+          <div class="form-group text-center">
+            <h1 class="text-dark">Iniciar sesión</h1>
+            <img class="imgRedonda" />
+          </div>
+          <form (submit)="login()">
+            <div class="form-group mx-sm-2 pt-2">
+              <input type="text" id="usuario" class="form-control" placeholder="Ingrese su Usuario " [(ngModel)]="datosLogin.usuario" name="usuario">
+            </div>
+            <div class="form-group mx-sm-2 pt-2">
+              <input type="text" id="contrasena" class="form-control" placeholder="Ingrese su Contraseña" [(ngModel)]="datosLogin.contrasena" name="contrasena">
+            </div>
+            <div class="d-grid gap-2 col-8 mx-auto pt-4">
+              <input type="submit" class="btn btn-lg btn-primary ingresar" value="Ingresar">
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </section>
-

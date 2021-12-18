@@ -40,13 +40,6 @@ export class NuevoInmuebleComponent implements OnInit {
     })
   }
 
-
-  /*getInmueblesHabitaciones(){
-    this.inmuebleService.getInmueblesHabitaciones().subscribe((inmueble)=>{
-      this.InmueblesHabitaciones = inmueble
-    })
-  }
-*/
   saveInmueble(): void{
     if(this.inmueble.nombreInmueble && this.inmueble.habitaciones && this.inmueble.banos && this.inmueble.pisos && this.inmueble.sector && this.inmueble.precio){
       this.inmuebleService.postCreateInmueble(this.inmueble).subscribe((respuesta)=>{

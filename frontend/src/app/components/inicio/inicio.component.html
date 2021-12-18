@@ -3,7 +3,7 @@
   <button type="button" class="btn ms-4" data-bs-toggle="offcanvas" href="#offcanvasExample">
     Busqueda
   </button>
-  <button type="button" class="btn ms-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button *ngIf="authService.estoyLogged()" type="button" class="btn ms-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Agregar Inmueble
   </button>
   <div class="container mt-5">
@@ -31,9 +31,9 @@
                 <p class="card-text">{{"Cocina Integral: " + inmueble.cocinaIntegral}}</p>
               </div>
             </div>
-            <div class="card-footer text-white bg-dark ">
-              <a href="">Contactar asesor</a>
-            </div>
+            <button type="button" class="btn ms-4" data-bs-toggle="modal" data-bs-target="#asesorModal">
+              Contactar asesor
+            </button>
           </div>
           <!-- Card de Busqueda, trae solo los documentos buscados -->
           <div class="card border-dark text-dark cardInmueble mb-3" style="max-width: 18rem;"
@@ -55,7 +55,6 @@
               <button type="button" class="btn ms-4" data-bs-toggle="modal" data-bs-target="#asesorModal">
                 Contactar asesor
               </button>
-              <!--<a href="#asesorModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#asesorModal">Contactar asesor</a>-->
             </div>
           </div>
         </div>

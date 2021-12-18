@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InmuebleService } from 'src/app/services/inmueble.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-inicio',
@@ -21,7 +22,7 @@ export class InicioComponent implements OnInit {
     cocinaIntegral: ""
   }
 
-  constructor(private inmuebleService: InmuebleService) { }
+  constructor(private inmuebleService: InmuebleService, public authService: AuthService) { }
 
   ngOnInit(): void {
     this.allInmuebles = []

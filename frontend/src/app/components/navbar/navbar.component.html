@@ -13,7 +13,8 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
       <div class="d-flex">
         <button class="btn active" data-bs-target="btn" data-bs-target="#catalogo">Catalogo</button>
-        <button class="btn active" routerLink="/login">Ingresar</button>
+        <button *ngIf="!authService.estoyLogged()" class="btn active" routerLink="/login">{{navbarText}}</button>
+        <button *ngIf="authService.estoyLogged()" class="btn active" (click)="authService.logoutUser()">Salir</button>
       </div>
     </div>
   </div>
