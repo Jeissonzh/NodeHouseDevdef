@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InmuebleService } from 'src/app/services/inmueble.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-nuevo-inmueble',
@@ -25,7 +26,7 @@ export class NuevoInmuebleComponent implements OnInit {
     vistas:""
   }
 
-  constructor(private inmuebleService: InmuebleService) {
+  constructor(private inmuebleService: InmuebleService, private toastr: ToastrService) {
     this.allUsers = ["Agente 1","Agente 2","Agente 3"]
   }
 
@@ -43,17 +44,16 @@ export class NuevoInmuebleComponent implements OnInit {
   saveInmueble(): void{
     if(this.inmueble.nombreInmueble && this.inmueble.habitaciones && this.inmueble.banos && this.inmueble.pisos && this.inmueble.sector && this.inmueble.precio){
       this.inmuebleService.postCreateInmueble(this.inmueble).subscribe((respuesta)=>{
-        if(respuesta as any){
-          document.getElementById("closeModal")?.click()
-          alert("Se ha agregado el inmueble")
-          this.getAllInmuebles()
+        if((respuesta as any).type=="error"){
+          this.toastr.error((respuesta as any).msg, 'Error!');
         }else{
-          alert("Error, no ha completado los datos de su inmueble")
+          document.getElementById("closeModal")?.click()
+          this.toastr.success((respuesta as any).msg, 'Se guardo el inmueble!');
           this.getAllInmuebles()
         }
       })
     }else{
-      alert("Faltan campos por llenar!");
+      this.toastr.error('Faltan campos por llenar', 'Error!');
     }
   }
 }
